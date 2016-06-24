@@ -1,0 +1,8 @@
+actsastaggableon
+
+
+env bucket name
+video autoplay
+
+change exp 
+***bind to IP
