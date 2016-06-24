@@ -170,6 +170,7 @@ DEPENDENCIES
   capcoauth
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  httparty (~> 0.13)
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.6)

@@ -38,6 +38,8 @@ gem 'capcoauth'
 
 gem 'dotenv-rails'
 
+gem 'httparty', '~> 0.13'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

@@ -1,7 +1,6 @@
-# AWS.config(
-#   :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-#   :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-# )
+require 'aws-sdk'
 
-# S3_BUCKET =  AWS::S3.new.buckets[ENV['S3_BUCKET']]
-
+Aws.config.update({
+  region: ENV['AWS_REGION'] || 'us-west-2',
+  credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'], ENV['AWS_SECRET_ACCESS_KEY'])
+})
