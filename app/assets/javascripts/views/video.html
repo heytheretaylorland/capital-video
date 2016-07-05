@@ -1,0 +1,10 @@
+
+<div class="container" ng-controller="VideoCtrl" bind-html-unsafe="video.code">
+		<h1 class="video-title">{{video.title}}</h1><br>
+	<div class="iframe-container row">
+		<iframe id='modal-video' ng-src="{{ trustUrl(video.code) }}" frameborder='0'></iframe><br>
+	</div>
+		{{video.tags}}<br>
+		<p>{{video.description}}</p>
+	
+</div>

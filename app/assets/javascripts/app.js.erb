@@ -16,17 +16,17 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: "<%= asset_path('views/main.html') %>",
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: "<%= asset_path('views/about.html') %>",
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
       .when('/video/:video_id', {
-        templateUrl: 'views/video.html',
+        templateUrl: "<%= asset_path('views/video.html') %>",
         controller: 'VideoCtrl',
         controllerAs: 'video'
       })

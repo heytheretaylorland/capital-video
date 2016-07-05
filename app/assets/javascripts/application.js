@@ -17,4 +17,5 @@
 //= require angular-resource
 //= require angular-route
 //= require bootstrap
+//= reuire views/main.html
 //= require_tree .

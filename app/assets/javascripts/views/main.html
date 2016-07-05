@@ -1,0 +1,68 @@
+
+ <div ng-controller="MainCtrl" class="container">
+
+  <!-- MODAL TODO: extract into seperate template-->
+  <div id="video-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg row">
+      <div class="video-title">{{selectedVideo.title}}</div>
+      <div class="iframe-container">
+          <iframe id='modal-video' ng-src="{{ trustUrl(selectedVideo.code) }}" frameborder='0'></iframe>
+      </div>
+      <div class='video-modal-info col-md-10 col-md-offset-1'>
+          
+          <div class='col-md-8'>
+            <h1 style='display:inline; margin-right:0.5em;'>tags: </h1>
+            <span ng-repeat="tag in selectedVideo.tags" style="font-size:30px;">
+              <span style='margin-right:0.5em;'>#{{tag}}</span>
+            </span>
+            <h2>Description</h2>
+            <p>{{selectedVideo.description}}</p>
+          </div>
+
+          <div class='col-md-4' 
+               style='margin-top:1em; padding-bottom:1em'>
+              <a href="#/video/{{selectedVideo.video_id}}"
+                 onclick="$('body').removeClass('modal-open');
+                          $('.modal-backdrop').remove(); ">
+                <div class='modal-links'><h3>visit page</h3></div>
+              </a> 
+              <br>
+              <a href=""><div class='modal-links'><h3>share to CIT</h3></div></a>
+              <br>
+              <a href=""><div class='modal-links'><h3>share to email</h3></div></a>
+              <br>
+              <a href=""><div class='modal-links'><h3>copy link</h3></div></a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <span class="glyphicon glyphicon-search" 
+        aria-hidden="true" 
+        onclick="document.getElementById('video-filter-input').focus()">
+
+    <input type="text" 
+           id="video-filter-input" 
+           ng-model="searchText">
+  
+  </span>
+
+  <div style="text-align:center; margin-top:5em;">
+      <a href=""><h3 style="margin:2em; font-size:35px; font-weight: bold;">home</h3></a>
+      <a href=""><h3 style="margin:2em; font-size:35px; font-weight: bold;">explore</h3></a>
+      <a href=""><h3 style="margin:2em; font-size:35px; font-weight: bold;">subscriptions</h3></a>
+  </div>
+
+  <div style='margin-left:20px' class="row">
+
+    <div class="col-md-3 video-container" ng-repeat="video in videos | filter:searchText">
+      <a data-toggle="modal" data-target=".bd-example-modal-lg" ng-click="select($index); setVideo(video); approveResource(video.code)">
+        <img class='thumbnails' src="{{video.thumbnail}}">
+        <p>{{video.title}}</p>
+      </a>
+    </div>
+  </div>
+ </div>
+a
