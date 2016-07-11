@@ -1,6 +1,6 @@
 @font-face {
   font-family: TungstenMedium;
-  src: url("fonts/Tungsten-Medium.otf") format("opentype");
+  src:url( "<%= asset_path 'Tungsten-Medium.otf' %>")
 }
 
 .browsehappy {
@@ -17,7 +17,8 @@ body {
 }
 
 body p {
-  font-size: 20px;
+  font-size: 16px;
+  display: inline;
 }
 
 h3{
@@ -35,13 +36,6 @@ h3{
 /* Main Page */
 .header {
   margin-bottom: 10px;
-}
-
-.footer{
-  background-color: #000;
-  text-align: center;
-  min-height: 5em;
-  font-size: 2em;
 }
 
 .footer i {
@@ -147,6 +141,10 @@ img.thumbnails:hover {
 
 /* Custom page footer */
 .footer {
+  background-color: #000;
+  text-align: center;
+  min-height: 2em;
+  font-size: 2em;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;

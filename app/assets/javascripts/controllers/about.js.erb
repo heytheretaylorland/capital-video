@@ -1,0 +1,49 @@
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name capcoVideoApp.controller:VideoCtrl
+ * @description
+ * # VideoCtrl
+ * Controller of the capcoVideoApp
+ */
+angular.module('capcoVideoApp')
+  .controller('AboutCtrl', function ($scope, $sce) {
+
+    $scope.profiles = [
+      
+      {
+        name            : 'Maxwell Ridgeway',
+        title           : 'Managing Director -Sr. Editor',
+        instagramHandle : 'MaxwellRidgeway',
+        twitterHandle   : 'MaxwellRidgeway',
+        img             : "../../assets/images/profiles/max.png"
+      },
+
+      {
+        name            : 'Lex Torres',
+        title           : 'Producer - Editor',
+        instagramHandle : 'lexstatic',
+        twitterHandle   : 'lextorres',
+        img             : "../../assets/images/profiles/lex.png"
+      },
+
+      {
+        name            : 'Taylor Mason',
+        title           : 'Managing Developer',
+        instagramHandle : 'heytheretaylor',
+        twitterHandle   : 'heytheretaylor',
+        img             : "../../assets/images/profiles/taylor.png"
+      },
+
+      {
+        name            : 'Eddie Shin',
+        title           : 'Lead Developer',
+        instagramHandle : 'eddition',
+        twitterHandle   : 'edditiontm',
+        img             : "../../assets/images/profiles/eddie.png"
+      },
+
+    ]
+
+  });

@@ -1,1 +1,19 @@
-<p>This is the about view.</p>
+<div class='container' ng-controller='AboutCtrl'>
+	<div class='row'  style='margin: 4em 0;'>
+
+		<div class='col-md-3' ng-repeat='profile in profiles'
+			style="text-align:center;">
+
+			<img src="{{profile.img}}"
+			 	 style="width:100%; 
+			 	 		height:auto;">
+			<h3>{{profile.name}}</h2>
+			<h4>{{profile.title}}</h4>
+			<i class="fa fa-instagram" aria-hidden="true" style='display:inline'></i>
+			<p> {{profile.instagramHandle}}</p><br>
+			<i class="fa fa-twitter" aria-hidden="true" style='display:inline'></i>
+			<p> {{profile.twitterHandle}}</p>
+		</div>
+
+	</div>
+</div>
